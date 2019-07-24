@@ -6,7 +6,27 @@ Ported from [Kendryte `kendryte-freertos-sdk`](https://github.com/kendryte/kendr
 
 ## Changes to make the SDK work better with MicroPython, but can be used as SDK for other applications to
 
-_**The following files were modified:**_
+```
+cd build
+cmake ../ -DPROJ=K210_SDK -DTOOLCHAIN=<path_to_kendryte-toolchain>/bin
+make 
+```
+
+Creates libraries:
+
+```
+cmake/third_party/fatfs/libfatfs.a
+cmake/third_party/lwip/liblwipcore.a
+cmake/SDK/bsp/libbsp.a
+cmake/SDK/drivers/libdrivers.a
+cmake/SDK/hal/libhal.a
+cmake/SDK/posix/libposix.a
+cmake/SDK/freertos/libfreertos.a
+```
+
+---
+
+_**The following files are modified:**_
 
 * lib/bsp/
   * `printf.c`
