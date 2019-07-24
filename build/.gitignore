@@ -1,0 +1,7 @@
+Makefile
+*.cmake
+*.json
+*.txt
+/CMakeFiles
+/SDK
+/third_party

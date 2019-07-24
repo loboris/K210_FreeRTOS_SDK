@@ -12,7 +12,7 @@ cmake ../ -DPROJ=K210_SDK -DTOOLCHAIN=<path_to_kendryte-toolchain>/bin
 make 
 ```
 
-Use `-jN` option for faser build.
+Use `-jN` option for faster build.
 
 The following libraries are created:
 
