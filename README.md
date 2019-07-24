@@ -12,7 +12,9 @@ cmake ../ -DPROJ=K210_SDK -DTOOLCHAIN=<path_to_kendryte-toolchain>/bin
 make 
 ```
 
-Creates libraries:
+Use `-jN` option for faser build.
+
+The following libraries are created:
 
 ```
 cmake/third_party/fatfs/libfatfs.a
