@@ -10,6 +10,10 @@ You may want to edit `lib/freertos/conf/FreeRTOSConfig.h` to make some changes t
 
 ---
 
+Use the latest [Kendryte GNU Toolchain v8.2.0-20190409](https://github.com/kendryte/kendryte-gnu-toolchain/releases/tag/v8.2.0-20190409).
+
+---
+
 To compile **only the libraries**, execute (_no project given_):
 
 ```bash
