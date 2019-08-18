@@ -2,6 +2,8 @@ Makefile
 *.cmake
 *.json
 *.txt
+*.bin
+hello_world*
 /CMakeFiles
 /SDK
 /third_party
