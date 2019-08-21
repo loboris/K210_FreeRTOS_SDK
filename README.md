@@ -36,6 +36,34 @@ SDK/freertos/libfreertos.a
 
 ---
 
+### Example: Build 'uart_example' project
+
+Change working directory to **build** directory.<br>
+**Export** your Kendryte toolchain directory path, for example<br>
+`export CROSS_COMPILE=${PWD}/../../kendryte-toolchain/bin`
+
+Execute:
+
+```
+cmake ../ -DPROJ=uart_example -DTOOLCHAIN=${CROSS_COMPILE}
+make -j8
+```
+
+Flash the created `uart_example.bin` to your board.
+
+`kflash.py` is provided in the `src` directory.<br>
+Change working directory to **src** directory.<br>
+Execute:
+
+```
+./kflash.py -p /dev/ttyUSB0 -b 2000000 -t ../build/uart_example.bin
+```
+
+This version of `kflash.py` has terminal emulator included, with `-t` option it will be started after flashing.
+
+
+---
+
 To **build the project**, place your project source files in the directory `src/<project_name>` and execute:
 
 ```bash

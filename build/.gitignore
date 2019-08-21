@@ -4,6 +4,7 @@ Makefile
 *.txt
 *.bin
 hello_world*
+uart_exmaple*
 /CMakeFiles
 /SDK
 /third_party

@@ -28,6 +28,11 @@ add_subdirectory(third_party)
 
 # Do not compile project if not given
 if (NOT PROJ STREQUAL "Dummy")
+    include_directories(${CMAKE_CURRENT_LIST_DIR}/lib/drivers/include
+                        ${CMAKE_CURRENT_LIST_DIR}/lib/hal/include
+                        ${CMAKE_CURRENT_LIST_DIR}/lib/freertos/include
+                        ${CMAKE_CURRENT_LIST_DIR}/lib/freertos/portable
+                        ${CMAKE_CURRENT_LIST_DIR}/lib/freertos/conf)
     add_source_files(src/${PROJ}/*.c src/${PROJ}/*.s src/${PROJ}/*.S src/${PROJ}/*.cpp)
     include(./cmake/executable.cmake)
 endif ()
