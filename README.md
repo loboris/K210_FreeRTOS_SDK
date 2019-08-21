@@ -36,6 +36,18 @@ SDK/freertos/libfreertos.a
 
 ---
 
+To **build the project**, place your project source files in the directory `src/<project_name>` and execute:
+
+```bash
+cd build
+cmake ../ -DPROJ=<project_name> -DTOOLCHAIN=<path_to_kendryte-toolchain>/bin
+make 
+```
+
+Use `-jN` **make** option for faster build.
+
+---
+
 ### Example: Build 'uart_example' project
 
 Change working directory to **build** directory.<br>
@@ -61,22 +73,10 @@ Execute:
 
 This version of `kflash.py` has terminal emulator included, with `-t` option it will be started after flashing.
 
-
 ---
 
-To **build the project**, place your project source files in the directory `src/<project_name>` and execute:
 
-```bash
-cd build
-cmake ../ -DPROJ=<project_name> -DTOOLCHAIN=<path_to_kendryte-toolchain>/bin
-make 
-```
-
-Use `-jN` **make** option for faster build.
-
----
-
-### Modifications
+## Modifications
 
 * Drivers
   * **uarths**: added - `uarths_baudrate` global variable used by `uarths_init` function
